@@ -1,0 +1,25 @@
+@import 'config';
+@import 'input';
+@import 'result';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Muli', sans-serif;
+}
+.appInterface {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+header {
+  text-align: center;
+}
+main {
+  padding: 2rem;
+}
+footer {
+  text-align: center;
+}

@@ -1,0 +1,25 @@
+.result-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  .temperature {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .weather-icon {
+    width: 350px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .searched-location {
+    line-height: 1.5;
+  }
+}

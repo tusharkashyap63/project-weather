@@ -1,0 +1,31 @@
+.input-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+
+  #location {
+    border: 2px solid black;
+    outline: none;
+    padding: 0.5rem;
+    width: 60%;
+    font-size: 1.3rem;
+    border-radius: 5px;
+
+    &:focus {
+      border-color: #3498db;
+    }
+  }
+
+  button {
+    border: none;
+    outline: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    margin-left: 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    box-shadow: 0 6px 30px -10px rgba(#4a74c9, 1);
+  }
+}

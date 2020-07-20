@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Muli&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="scss/style.min.css" />
+    <title>Weather Project</title>
+  </head>
+  <body>
+    <div class="appInterface">
+      <header><h1>Weather</h1></header>
+      <main>
+        <div class="input-container">
+          <input type="text" name="location" id="location" placeholder="Enter location" />
+          <button id="selectBtn">Select</button>
+        </div>
+
+        <div class="result-container">
+          <div class="temperature">
+            <p id="temperature">13<sup>o</sup></p>
+            <p id="description">RAINY</p>
+          </div>
+
+          <div class="weather-icon"><img src="images/iconfinder_Raining_5729383.png" alt="" /></div>
+
+          <div class="searched-location">
+            <h3 id="locationInResult">MEXICO CITY</h3>
+            <p id="day">SATURDAY</p>
+            <p id="date">SEPTEMBER 17</p>
+          </div>
+        </div>
+      </main>
+      <footer>Made by <a href="https://github.com/tusharkashyap63">Tushar Kashyap</a></footer>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
