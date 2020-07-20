@@ -20,7 +20,7 @@ async function getWeatherInfo() {
     let location = document.getElementById('location').value;
 
     let request = new Request(
-      `http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=48dd7789f547cbce47a83cadb7529e50`
+      `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=48dd7789f547cbce47a83cadb7529e50`
     );
     let weatherData = await fetch(request).then((res) => res.json());
 
