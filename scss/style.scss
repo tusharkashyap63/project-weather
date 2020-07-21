@@ -1,5 +1,6 @@
 @import 'config';
 @import 'input';
+@import 'spinner';
 @import 'result';
 
 * {
@@ -11,15 +12,13 @@ body {
   font-family: 'Muli', sans-serif;
 }
 .appInterface {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 header {
   text-align: center;
 }
 main {
   padding: 2rem;
-}
-footer {
-  text-align: center;
 }

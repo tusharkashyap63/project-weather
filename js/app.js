@@ -17,6 +17,9 @@ const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Frida
 
 async function getWeatherInfo() {
   try {
+    document.getElementById('spinner').style.display = 'block';
+    document.querySelector('.result').style.display = 'none';
+
     let location = document.getElementById('location').value;
 
     let request = new Request(
@@ -28,16 +31,28 @@ async function getWeatherInfo() {
     document.getElementById('temperature').innerHTML = `${(weatherData.main.temp - 273.15).toFixed(
       2
     )}<sup>o</sup>`;
-    document.getElementById(
-      'description'
-    ).textContent = weatherData.weather[0].description.toUpperCase();
+    document.getElementById('description').textContent = weatherData.weather[0].main.toUpperCase();
+    document.getElementById('humidity').innerHTML = `HUMIDITY: ${weatherData.main.humidity}%`;
 
-    document.getElementById('locationInResult').textContent = weatherData.name.toUpperCase();
+    // Weather icon
+    document.querySelector('.weather-icon>img').src = `images/${Math.trunc(
+      weatherData.weather[0].id / 100
+    )}.png`;
+    if (weatherData.weather[0].id === 800) {
+      document.querySelector('.weather-icon>img').src = `images/800.png`;
+    }
+
+    document.getElementById('locationInResult').textContent =
+      weatherData.name + ', ' + weatherData.sys.country;
     const todaysDate = new Date();
     document.getElementById('day').textContent = dayNames[todaysDate.getDay()].toUpperCase();
     document.getElementById('date').textContent =
       monthNames[todaysDate.getMonth()].toUpperCase() + ' ' + todaysDate.getDate();
+
+    document.getElementById('spinner').style.display = 'none';
+    document.querySelector('.result').style.display = 'flex';
   } catch (error) {
+    document.getElementById('spinner').style.display = 'none';
     console.log(error);
   }
 }
